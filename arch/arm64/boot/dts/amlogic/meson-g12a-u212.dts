@@ -21,3 +21,18 @@
     uart-has-rtscts;
     pinctrl-names = "default";
 };
+
+leds {
+		compatible = "gpio-leds";
+		power_led {
+			led_name = "power_led";
+                        gpios = <&gpio_ao GPIOAO_11 GPIO_ACTIVE_LOW>;
+			default-state = "on";
+		};
+		remote_led {
+			led_name = "remote_led";
+                        gpios = <&gpio_ao GPIOAO_10 GPIO_ACTIVE_LOW>;
+			default-state = "off";
+			linux,default-trigger = "rc-feedback";
+		};
+	};
