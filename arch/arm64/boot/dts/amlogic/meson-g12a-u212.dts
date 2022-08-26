@@ -28,10 +28,10 @@ leds {
 			linux,default-trigger = "rc-feedback";
 		};
 	};
+};
 &uart_A {
     status = "okay";
     pinctrl-0 = <&uart_a_pins>, <&uart_a_cts_rts_pins>;
     uart-has-rtscts;
     pinctrl-names = "default";
-};
 };
