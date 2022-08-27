@@ -28,18 +28,18 @@
 			default-state = "off";
 			linux,default-trigger = "rc-feedback";
 		};
-#		net_red {
-#			led_name = "net_red";
-#                       gpios = <&gpio GPIO_63 GPIO_ACTIVE_LOW>;
-#			default-state = "off";
-#			linux,default-trigger = "0.0:00:link";
-#		};
-#		net_green {
-#			led_name = "net_green";
-#                       gpios = <&gpio GPIO_64 GPIO_ACTIVE_LOW>;
-#			default-state = "off";
-#			linux,default-trigger = "0.0:00:link";
-#		};
+/*		net_red {
+			led_name = "net_red";
+                       gpios = <&gpio GPIO_63 GPIO_ACTIVE_LOW>;
+			default-state = "off";
+			linux,default-trigger = "0.0:00:link";
+		};
+		net_green {
+			led_name = "net_green";
+                       gpios = <&gpio GPIO_64 GPIO_ACTIVE_LOW>;
+			default-state = "off";
+			linux,default-trigger = "0.0:00:link";
+		}; */
 	};
 	memory@0 {
 		device_type = "memory";
