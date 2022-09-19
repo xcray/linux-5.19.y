@@ -15,7 +15,7 @@
 	    serial1 = &uart_A;
 	};
 
-	leds {
+/*	leds {
 		compatible = "gpio-leds";
 		power_led {
 			led_name = "power_led";
@@ -28,7 +28,7 @@
 			default-state = "off";
 			linux,default-trigger = "rc-feedback";
 		};
-/*		net_red {
+		net_red {
 			led_name = "net_red";
                        gpios = <&gpio GPIO_63 GPIO_ACTIVE_LOW>;
 			default-state = "off";
@@ -39,8 +39,8 @@
                        gpios = <&gpio GPIO_64 GPIO_ACTIVE_LOW>;
 			default-state = "off";
 			linux,default-trigger = "0.0:00:link";
-		}; */
-	};
+		};
+	}; */
 	memory@0 {
 		device_type = "memory";
 		reg = <0x0 0x0 0x0 0x80000000>;
@@ -51,4 +51,7 @@
     pinctrl-0 = <&uart_a_pins>, <&uart_a_cts_rts_pins>;
     uart-has-rtscts;
     pinctrl-names = "default";
+};
+&internal_ephy  {
+	max-speed = <100>;
 };
